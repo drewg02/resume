@@ -1,124 +1,171 @@
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass{resume}
 
-\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry} % Document margins
-\usepackage{etaremune} % For reverse numbering
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Drew Graham} % Your name
-\address{wdgraham@coastal.edu \\ (843) 591-4262 \\ Conway, SC, 29526} 
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+
+\name{Drew Graham}
 
 \begin{document}
+
+%----------------------------------------------------------------------------------------
+%	Contact
+%----------------------------------------------------------------------------------------
+\begin{rContact}
+  \rContactRow{Email}{\href{mailto:wdgraha@clemson.edu}{wdgraha@clemson.edu}}
+               {Phone}{(843) 591-4262}
+               {Location}{Conway, SC 29526}
+  \rContactRow{Website}{\href{https://drewg.us}{drewg.us}}
+               {LinkedIn}{\href{https://www.linkedin.com/in/drewg02}{linkedin.com/in/drewg02}}
+               {Scholar}{\href{https://scholar.google.com/citations?user=jO8_G8wAAAAJ}{Google Scholar}}
+\end{rContact}
 
 %----------------------------------------------------------------------------------------
 %	Education
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Education}
-  \itemsep -1pt {} 
-{\bf Coastal Carolina University (CCU) \hfill Conway, SC} \\
-BS in Computer Science, GPA: 3.561 \hfill 5/2025 %\\
-%GPA: 3.57
-\end{rSection}
+\begin{rEducation}
+  \rEducationEntry{Clemson University}{Clemson, SC}{PhD in Computer Engineering}{8/2025-Present}
+  \rEducationEntry{Coastal Carolina University}{Conway, SC}{BS in Computer Science, GPA: 3.605}{8/2021-5/2025}
+  \rEducationEntry{Carolina Forest High School}{Myrtle Beach, SC}{High School Diploma}{8/2017-6/2021}
+\end{rEducation}
 
 %----------------------------------------------------------------------------------------
 % Experience
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Experience}
-  \itemsep -1pt {} 
-\begin{rSubsection}{Los Alamos National Laboratory}{Los Alamos, NM}{Student Researcher}{5/2024-8/2024}
-  \item Applied undergraduate research to write a paper and deploy code on supercomputers at LANL.
-  \item Implemented data parallelism across multiple GPUs on a single node for model training and inferencing.
-  \item Extended data parallelism to multiple nodes for model training and inferencing.
-\end{rSubsection}
 
-\begin{rSubsection}{Coastal Carolina University}{Conway, SC}{Undergraduate Researcher}{1/2023-Present}
-  \item Leveraged PetaVision for anomaly detection on the MVTec AD dataset.
-  \item Applied Convolutional Neural Networks and Transformers to the Machinery Fault Database (MAFAULDA) for time series forecasting.
-  \item Developed 2D physics proxy applications and utilized SimVP(Simpler yet Better Video Prediction) for spatio-temporal prediction.
-\end{rSubsection}
+\begin{rExperience}
 
-\begin{rSubsection}{}{}{Student Assistant}{8/2022-12/2022}
-  \item Graded assignments and exams for Dr. Prerit Datta's beginner Python course.
-  \item Assisted students with questions they had about assignments and exams.
-\end{rSubsection}
 
-\begin{rSubsection}{Verus Operations Ltd}{Remote – London, UK}{Full Stack Web Developer}{3/2021-3/2022}
-  \item Built a full-stack application using Node, Express, and EJS.
-  \item Optimized MongoDB backend to increase performance.
-  \item Effectively collaborated in a remote setting with an international team.
-\end{rSubsection}
+\rCompany{Clemson University}{Clemson, SC}
 
-\begin{rSubsection}{Standard Financial}{Remote – Plano, TX}{Data Developer}{6/2022-3/2023}
-  \item Authored Python scripts to populate financial data into MongoDB and keep it up to date. 
-  \item Advised on technical aspects of product design as a Back-End Web Developer.
-  \item Built and integrated UI elements using JavaScript, TypeScript, and ReactJS.
-  \item Optimized backend services for performance.
-\end{rSubsection}
+\rPosition{Graduate Teaching Assistant}{8/2025-Present}
+{Grade homework, projects, and exams for ECE 2210: Python Programming for Electrical and Computer Engineering.}
+{Hold a weekly in-person office hours to answer questions and provide guidance on course material.}
+{Answer student questions via email and Canvas, clarifying requirements and assisting with debugging.}
+{}
+{}
 
-\end{rSection} 
+\rCompany{Los Alamos National Laboratory}{Los Alamos, NM}
+
+\rPosition{Student Researcher}{5/2025-8/2025}
+{Contributed to the design and implementation of \href{https://github.com/lanl/ursa}{URSA}, a modular agentic ecosystem developed at LANL to automate scientific and engineering workflows through small, specialized LLM-driven agents for research, planning, code generation, execution, version control, and more.}
+{Built the execution agent's edit\_code tool to perform precise single-change code edits and generate unified-diff previews for transparency and reproducibility.}
+{Developed a Git agent that validates commands, orchestrates commits/merges/rollbacks, and generates structured commit messages capturing the reason behind every workspace change.}
+{Demonstrated end-to-end agentic workflows on an integer summation benchmark by auto-generating three implementations, benchmarking performance, and visualizing Git history for full traceability.}
+{}
+
+\rPosition{Student Researcher}{5/2024-8/2024}
+{Developed and deployed ML surrogate models on high-performance computing (HPC) clusters.}
+{Implemented multi-GPU parallelism to accelerate ML training and inference.}
+{Extended parallelism to multi-node scaling, optimizing deep learning models for large-scale scientific simulations.}
+{Lead author on a research paper on applied ML for scientific computing, accepted at IEEE ICMLA 2024.}
+{Worked with PyTorch, HPC clusters (such as Chicoma and Venado), SimVP, and other time-series forecasting models.}
+
+\rCompany{Coastal Carolina University}{Conway, SC}
+
+\rPosition{Undergraduate Researcher}{1/2023-5/2025}
+{Conducted research on spatio-temporal ML models for scientific computing, using SimVP and other ML models for physics-based simulations.}
+{Applied Convolutional Neural Networks (CNNs) and Transformers for anomaly detection and predictive modeling.}
+{Used PetaVision to analyze MVTec AD dataset for industrial defect detection in manufactured parts.}
+{Tested AI-based time-series forecasting models on the MAFAULDA machinery fault dataset.}
+{Presented findings at the South Carolina Academy of Science (SCAS) 2024 annual meeting, the Supercomputing 2024 (SC24) conference at the South Carolina Research Computing Consortium (SCRCC) booth and the IEEE ICMLA 2024 conference.}
+
+\rPosition{Student Assistant}{8/2022-12/2022}
+{Graded assignments for CSCI 135: Introduction to Programming.}
+{Assisted students in understanding errors and debugging their code.}
+{Provided feedback to help improve coding logic and problem-solving skills.}
+{}
+{}
+
+\rCompany{Standard Financial}{Remote - Plano, TX}
+
+\rPosition{Data Developer}{6/2022-3/2023}
+{Built Python-based Extract, Transform, Load (ETL) pipelines to ingest and update financial data in MongoDB.}
+{Contributed to backend optimizations, increasing API efficiency by up to 60\%.}
+{Integrated JavaScript, TypeScript, and ReactJS components for financial analytics dashboards.}
+{}
+{}
+
+\rCompany{Verus Operations Ltd}{Remote - London, UK}
+
+\rPosition{Full Stack Web Developer}{3/2021-3/2022}
+{Developed a full-stack web app for managing software purchases and DRM authentication.}
+{Integrated a custom DRM system that handled license verification and whitelist management for purchased software.}
+{Implemented invoice processing, support request management, and user authentication features.}
+{Optimized MongoDB queries to improve application performance and reduce page load timings.}
+{Designed and maintained the web frontend using EJS and JavaScript, while handling backend logic using Node.js and Express.}
+
+\end{rExperience}
 
 %----------------------------------------------------------------------------------------
 %	Publications
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Publications} 
-  \itemsep -1pt
-  \renewcommand{\labelenumi}{[\theenumi]}
-  \begin{etaremune}
-    \item \underline{Warren D. Graham}, Leslie A. Horace, William M. Jones, Sean Tronsen, Sharmistha Chakrabarti, Vanessa Job, Nathan A. DeBardeleben, \href{https://doi.org/10.1109/ICMLA61862.2024.00114}{“Applied Machine Learning for Surrogate Modeling: A Spatio-Temporal Approach,”} \textit{IEEE International Conference on Machine Learning and Applications}, December 2024 (accepted).
-    \item William Jones, Craig Walker, Vivian Hafener, \underline{Warren D. Graham}, Nathan DeBardeleben, Steven Senator, \href{https://doi.org/10.1109/CLUSTERWorkshops61457.2023.00015}{“Incorporating Staggered Planned Maintenance Reservations to Improve Performance in Computational Clusters,”} \textit{IEEE Conference of Cluster Computing / Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications}, October 2023.
-  \end{etaremune}
-\end{rSection}
+
+\begin{rPublications}
+
+\rPublication{\underline{Warren D. Graham}, Leslie A. Horace, William M. Jones, Sean Tronsen, Sharmistha Chakrabarti, Vanessa Job, Nathan A. DeBardeleben}{Applied Machine Learning for Surrogate Modeling: A Spatio-Temporal Approach}{IEEE International Conference on Machine Learning and Applications}{December 2024}{https://doi.org/10.1109/ICMLA61862.2024.00114}
+
+\rPublication{William Jones, Craig Walker, Vivian Hafener, \underline{Warren D. Graham}, Nathan DeBardeleben, Steven Senator}{Incorporating Staggered Planned Maintenance Reservations to Improve Performance in Computational Clusters}{IEEE Conference of Cluster Computing / Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications}{October 2023}{https://doi.org/10.1109/CLUSTERWorkshops61457.2023.00015}
+
+\end{rPublications}
 
 %----------------------------------------------------------------------------------------
 %	Presentations and Posters
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Presentations and Posters} 
-  \itemsep -1pt
-  \renewcommand{\labelenumi}{[\theenumi]}
-  \begin{etaremune}
-    \item \underline{Warren D. Graham}, \href{https://custom.cvent.com/F6288ADDEF3C4A6CBA5358DAE922C966/files/event/7845571bb15d418ca24a14468480c4ff/9e47605ad3c3426e914067b23e990907.pdf}{“Machine Learning for Surrogate Modeling of Scientific Codes: Practice and Experience,”} \textit{Conference on Data Analysis}, February 2025.
-    \item \underline{Warren D. Graham}, \href{https://scrcc.sites.clemson.edu/sc24.html}{“AIML for Science: Surrogate Modeling Using SimVP,”} \textit{South Carolina Research Computing Consortium Booth, Supercomputing 2024 (SC24) Conference}, November 2024.
-    \item \underline{Warren D. Graham}, \href{https://www.coastal.edu/media/2024siteassets/contentassets/documents/research/2024UndergraduateResearchSymposiumProgram.pdf}{“Applied Machine Learning for Surrogate Modeling: A Spatio-Temporal Approach,”} \textit{Coastal Carolina University Undergraduate Research Symposium}, April 2024.
-    \item \underline{Warren D. Graham}, \href{https://drive.google.com/file/d/1SskejTx37OMQWiohi3CtgqwFvTcU6G7U/view}{“Applied Machine Learning in Scientific Computing,”} \textit{South Carolina Academy of Science Annual Meeting}, March 2024.
-  \end{etaremune}
-\end{rSection}
 
-%\newpage
+\begin{rPresentationsPosters}
+
+\rPresentation{\underline{Warren D. Graham}}{Commit with Reason: Managing Workspace State in Agentic Scientific Workflows}{Coastal Carolina University Summer Research Symposium}{August 2025}{https://professorrichardsonresearch.com/wp-content/uploads/2025/07/abstract-booklet-2025v2-1.pdf}
+
+\rPresentation{\underline{Warren D. Graham}}{Machine Learning for Surrogate Modeling of Scientific Codes: Practice and Experience}{Conference on Data Analysis}{February 2025}{https://custom.cvent.com/F6288ADDEF3C4A6CBA5358DAE922C966/files/event/7845571bb15d418ca24a14468480c4ff/9e47605ad3c3426e914067b23e990907.pdf}
+
+\rPresentation{\underline{Warren D. Graham}}{AIML for Science: Surrogate Modeling Using SimVP}{South Carolina Research Computing Consortium Booth, Supercomputing 2024 (SC24) Conference}{November 2024}{https://scrcc.sites.clemson.edu/sc24.html}
+
+\rPresentation{\underline{Warren D. Graham}}{Applied Machine Learning for Surrogate Modeling: A Spatio-Temporal Approach}{Coastal Carolina University Undergraduate Research Symposium}{April 2024}{https://www.coastal.edu/media/2024siteassets/contentassets/documents/research/2024UndergraduateResearchSymposiumProgram.pdf}
+
+\rPresentation{\underline{Warren D. Graham}}{Applied Machine Learning in Scientific Computing}{South Carolina Academy of Science Annual Meeting}{March 2024}{https://drive.google.com/file/d/1SskejTx37OMQWiohi3CtgqwFvTcU6G7U/view}
+
+\end{rPresentationsPosters}
+
 %----------------------------------------------------------------------------------------
 %	Technical Skills
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Technical Skills}
-  \itemsep -1pt {} 
-  \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-    Machine Learning & PyTorch, TensorFlow, Scikit-learn, Keras \\
-    Data Science & Pandas, NumPy, Matplotlib, Seaborn \\
-    Web Development & TypeScript, ReactJS, Node.js, Express, EJS, PHP \\
-    Databases & MongoDB, SQL \\
-  \end{tabular}  
-\end{rSection}
+
+\begin{rTechnicalSkills}
+
+\rSkill{Machine Learning}{PyTorch, TensorFlow, Scikit-learn, Keras}
+\rSkill{Data Science}{Pandas, NumPy, Matplotlib, Seaborn}
+\rSkill{Web Development}{TypeScript, ReactJS, Node.js, Express, EJS, PHP}
+\rSkill{Databases}{MongoDB, SQL}
+
+\end{rTechnicalSkills}
 
 %----------------------------------------------------------------------------------------
 %	Awards and Honors
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Awards and Honors}
-  \itemsep -1pt {} 
-  \begin{itemize}
-    \itemsep -7pt {} 
-    \item LIFE Scholarship Enhancement \hfill 2022-Present
-    \item LIFE Scholarship \hfill 2021-Present
-    \item Achieved Dean's List recognition in 6 out of 8 semesters at CCU.
-  \end{itemize}
-\end{rSection}
+
+\begin{rAwardsAndHonors}
+
+\rAward{SC LIFE Scholarship Enhancement}{2022-2025}
+\rAward{SC LIFE Scholarship}{2021-2025}
+\rAwardDesc{Dean's List Recognition}{}{Achieved Dean's List recognition in 6 out of 8 semesters at Coastal Carolina University.}
+\rAwardDesc{President's List Recognition}{}{Achieved President's List recognition in 1 semester at Coastal Carolina University.}
+
+\end{rAwardsAndHonors}
 
 %----------------------------------------------------------------------------------------
 %	Activities
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Activities}
-  \itemsep -1pt {} 
-  \begin{itemize}
-    \itemsep -7pt {} 
-    \item Initial member of the invitation-only Google WebDev Insights community. \hfill 3/2021-Present \\Shaping web development through discussions, surveys, and interviews.
-  \end{itemize}
-\end{rSection}
+
+\begin{rActivities}
+
+\rActivity{Young Americans For Liberty (YAL)}{2021-2025}{Assisted in organization leadership roles, including organizing member meetings, developing and executing plans for campus Student Rights Campaigns (SRC), and tabling to bring effective and uniting political discourse to the Coastal Carolina University campus.}
+
+\rActivity{Initial member of the invitation-only Google WebDev Insights community}{3/2021-Present}{Shaping web development through discussions, surveys, and interviews.}
+
+\rActivity{FFA - Carolina Forest High School}{2017-2021}{Assisted in maintaining campus grounds (watering, overseeding, planting, trimming and cutting), planting and maintaining plants in the greenhouse, and running the annual plant sale to raise funds for organization trips and events.}
+
+\rActivity{Advanced Placement (AP) Academy - Carolina Forest High School}{2017-2021}{Member of an exclusive group of top Advanced Placement students with regular meetings, maintained grades above a certain level and received privileges typically only given to Seniors such as early dismissal.}
+
+\end{rActivities}
 
 \end{document}
